@@ -1,0 +1,5 @@
+id = input()
+row = ord(id[0]) if len(id) == 3  else (print("неверная длина"), exit())
+row = (row - 65)*12 if 65 <= row <= 72 else (print("неверный ряд"), exit())
+col = int(id[1:]) if id[1:].isdigit() and 1 <= int(id[1:]) <= 12 else (print("неверный столбец"), exit())
+print(row + col)
